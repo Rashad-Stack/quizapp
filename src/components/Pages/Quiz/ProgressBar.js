@@ -1,22 +1,19 @@
 import React from 'react';
-import Button from '../Button';
+import Button from './Button';
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
 function ProgressBar() {
   return (
-    <div className="w-[calc(100vw-100px)]">
-      <div className="">
-        <span className="material-icons-outlined"> arrow_back </span>
+    <div className="hidden w-11/12 h-16 md:flex justify-between items-center gap-5 bg-white fixed left-1/2 -translate-x-1/2 bottom-5 shadow rounded-md px-3">
+      <Button>
+        <BsArrowLeft size={20} />
+      </Button>
+      <div className="w-full h-1 bg-gray-200">
+        <div className="w-1/3 h-1 bg-slate-900 progress-bar-thumb cursor-pointer"></div>
       </div>
-      <div className="">
-        <div className="">24% Cimplete!</div>
-        <div className="">
-          <div className="" style={{ width: '20%' }}></div>
-        </div>
-      </div>
-      <a href="result.html">
-        <Button className="">
-          <span>Next Question</span>
-          <span className="material-icons-outlined"> arrow_forward </span>
+      <a href="#!">
+        <Button>
+          <BsArrowRight size={20} />
         </Button>
       </a>
     </div>

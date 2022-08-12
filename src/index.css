@@ -5,6 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .progress-bar-thumb {
+    @apply relative after:absolute after:h-3 after:w-3 after:bg-slate-900 after:block after:right-0 after:top-1/2 after:-translate-y-1/2 after:rounded-full;
+  }
+}
+
 @font-face {
   font-family: 'Montserrat';
   src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');

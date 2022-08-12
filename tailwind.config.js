@@ -9,6 +9,15 @@ module.exports = {
       colors: {
         heading: '#002333',
       },
+      keyframes: {
+        scale: {
+          '0%': { transform: 'scale(0)' },
+          '100%': { transform: 'scale(1)' },
+        },
+      },
+      animation: {
+        scale: 'scale 0.3s linear',
+      },
     },
   },
   plugins: [],
