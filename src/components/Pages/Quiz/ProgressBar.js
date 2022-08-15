@@ -1,6 +1,7 @@
-import React from 'react';
-import Button from './Button';
-import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import React from "react";
+import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import Button from "./Button";
 
 function ProgressBar() {
   return (
@@ -11,11 +12,11 @@ function ProgressBar() {
       <div className="w-full h-1 bg-gray-200">
         <div className="w-1/3 h-1 bg-slate-900 progress-bar-thumb cursor-pointer"></div>
       </div>
-      <a href="#!">
+      <Link to="/result">
         <Button>
           <BsArrowRight size={20} />
         </Button>
-      </a>
+      </Link>
     </div>
   );
 }

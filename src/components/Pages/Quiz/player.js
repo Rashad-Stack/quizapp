@@ -20,7 +20,7 @@ function Player() {
       ) : (
         <div className="w-80 bg-white border-2 p-2 rounded-md relative">
           <img
-            src="https://github.com/learnwithsumit/react-quiz/blob/main/html/images/3.jpg?raw=true"
+            src="/assets/images/3.jpg"
             alt="thumbnail"
             className="w-100 object-cover animate-scale"
             loading="eager"

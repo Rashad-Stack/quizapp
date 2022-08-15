@@ -1,14 +1,16 @@
-import { BiUserCircle } from 'react-icons/bi';
+import { BiUserCircle } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 function Account() {
   return (
     <div className="flex items-center gap-2">
-      <a href="#!" className="flex items-center gap-1">
+      <Link to="/profile" className="flex items-center gap-1">
         <span className="text-3xl">
           <BiUserCircle />
-        </span>{' '}
-        Signup
-      </a>
+        </span>
+      </Link>
+      <Link to="/signup">Signup</Link>
+      <Link to="/login">Login</Link>
     </div>
   );
 }
