@@ -7,7 +7,7 @@ function Navigation() {
       <Link to="/" className="flex items-center py-2">
         <div className="w-16">
           <img
-            src="assets/images/logo-bg.png"
+            src="/assets/images/logo-bg.png"
             alt="Quizz App Logo"
             className="w-full object-cover"
           />
