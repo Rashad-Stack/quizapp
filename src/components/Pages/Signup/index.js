@@ -34,12 +34,12 @@ function Signup() {
   }
 
   return (
-    <>
+    <div className="px-5">
       <h1 className="text-left font-bold text-xl">Create an account</h1>
-      <div className="flex flex-wrap justify-between items-center mr-8 text-xs">
+      <div className="flex flex-wrap justify-between items-center text-xs">
         <Illustration />
         <Form
-          className="w-full md:w-1/2 flex flex-col gap-5"
+          className="w-full md:w-1/2 flex flex-col gap-5 "
           onSubmit={handleSubmit}
         >
           <TextInput
@@ -59,7 +59,7 @@ function Signup() {
             onChange={(e) => setEmail(e.target.value)}
           />
           <TextInput
-            type="password"
+            type="text"
             placeholder="Enter password"
             required
             value={password}
@@ -67,7 +67,7 @@ function Signup() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <TextInput
-            type="password"
+            type="text"
             placeholder="Confirm password"
             required
             value={confirmPassword}
@@ -94,7 +94,7 @@ function Signup() {
           </div>
         </Form>
       </div>
-    </>
+    </div>
   );
 }
 

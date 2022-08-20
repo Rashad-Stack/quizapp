@@ -1,42 +1,40 @@
 import { get, getDatabase, orderByKey, query, ref } from "firebase/database";
 import { useEffect, useState } from "react";
 
-export default function useVideoList() {
+export default function useAnswers(videoID) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
-  const [videos, setVideos] = useState([]);
+  const [answers, setAnswers] = useState([]);
 
   useEffect(() => {
-    const fetchVideos = async () => {
+    async function fetchAnswers() {
       // database related works
       const db = getDatabase();
-      const videosRef = ref(db, "videos");
-      const videoQuery = query(videosRef, orderByKey());
+      const answersRef = ref(db, "answers/" + videoID + "/questions");
+      const answersQuery = query(answersRef, orderByKey());
 
       try {
         setError(false);
         setLoading(true);
         // request firebase database
-        const snapshot = await get(videoQuery);
+        const snapshot = await get(answersQuery);
         setLoading(false);
         if (snapshot.exists()) {
-          setVideos(Object.values(snapshot.val()));
+          setAnswers(Object.values(snapshot.val()));
         }
       } catch (err) {
         console.log(err);
         setLoading(false);
         setError(true);
       }
-    };
+    }
 
-    return () => {
-      fetchVideos();
-    };
-  }, []);
+    fetchAnswers();
+  }, [videoID]);
 
   return {
     loading,
     error,
-    videos,
+    answers,
   };
 }

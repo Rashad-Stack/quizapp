@@ -33,9 +33,9 @@ function Login() {
   };
 
   return (
-    <>
-      <h1 className="text-left font-bold text-xl">login to your account</h1>
-      <div className="flex flex-wrap justify-between items-center mr-8 text-xs">
+    <div className="px-5">
+      <h1 className="text-left font-bold text-xl">Login to your account</h1>
+      <div className="flex flex-wrap justify-between items-center text-xs">
         <Illustration />
         <Form
           className="w-full md:w-1/2 flex flex-col gap-5"
@@ -78,7 +78,7 @@ function Login() {
           </div>
         </Form>
       </div>
-    </>
+    </div>
   );
 }
 

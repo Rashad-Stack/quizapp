@@ -16,8 +16,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/*" element={<PrivetOutlet />}>
-              <Route path="result" element={<Result />} />
-              <Route path="quiz" element={<Quiz />} />
+              <Route path="quiz/:id" element={<Quiz />} />
+              <Route path="result/:id" element={<Result />} />
             </Route>
             <Route path="/*" element={<PublicRoute />}>
               <Route path="signup" element={<Signup />} />

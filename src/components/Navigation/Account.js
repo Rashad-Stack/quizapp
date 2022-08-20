@@ -18,8 +18,12 @@ function Account() {
         </>
       ) : (
         <>
-          <Link to="/signup">Signup</Link>
-          <Link to="/login">Login</Link>
+          <Link to="/signup" className="font-medium text-lg text-heading">
+            Signup
+          </Link>
+          <Link to="/login" className="font-medium text-lg text-heading">
+            Login
+          </Link>
         </>
       )}
     </div>

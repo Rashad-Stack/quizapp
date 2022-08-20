@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 function Form({ children, className, ...rest }) {
   return (
-    <form className={`${className}`} action="#" {...rest}>
+    <form className={`${className}`} {...rest}>
       {children}
     </form>
   );

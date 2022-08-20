@@ -3,7 +3,7 @@ import React from "react";
 function Video({ title, id, noq }) {
   return (
     <div href="#!">
-      <div className="w-full max-w-sm h-fit bg-white border-2 border-gray-300 rounded-md cursor-pointer p-3 hover:shadow-lg">
+      <div className="w-80 2xl:w-96 h-fit bg-white border-2 border-gray-300 rounded-md cursor-pointer p-3 hover:shadow-lg">
         <img
           src={`http://img.youtube.com/vi/${id}/maxresdefault.jpg`}
           alt="Video title"
