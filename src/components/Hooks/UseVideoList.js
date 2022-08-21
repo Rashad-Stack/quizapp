@@ -29,9 +29,7 @@ export default function useVideoList() {
       }
     };
 
-    return () => {
-      fetchVideos();
-    };
+    fetchVideos();
   }, []);
 
   return {
